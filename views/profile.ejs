@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Sample Site</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+     <script>
+      <%/*function func1(){
+        alert("Hello! I am an alert box!!");
+      }
+      function func2(){
+        console.log("I am in the click handler 2!"); 
+      }*/%>
+    </script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" style="padding-top:30px">
+        <% if (message.length > 0) { %>
+          <div class="alert alert-danger col-sm-12" ><%= message %></div>
+        <% } else {%>
+          <% for (var i = 0; i < data.length; i++) {%>
+            <div class="panel panel-info">
+              <div class="panel-body">
+                <div class="row">
+                  <div onclick='console.log(i)' class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://localhost:8080/images/upload_images/<%=data[i].image%>" class="img-circle img-responsive"> </div>
+                  <div class=" col-md-9 col-lg-9 "> 
+                    <table class="table table-user-information">
+                      <tbody>
+                        <tr>
+                          <td>Upload Date:</td>
+                          <td><%=data[i].img_date%></td>
+                        </tr>
+                        <br>
+                        <tr>
+                          <td>Description:</td>
+                          <td><%=data[i].description%></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <%}%>
+    <% } %>
+        </div>
+      </div>
+  </body>
+</html>
